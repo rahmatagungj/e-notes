@@ -40,9 +40,9 @@ def get_user(username: str):
 @app.get("/login_user/{username}")
 def login_user(username: str, password: str):
     if userFunction.login_user(username,password) == "yes":
-        return {"Success": username}
+        return {"isSuccess": "true"}
     else:
-        return {"Failed login"}
+        return {"isSuccess": "false"}
 
 
 if __name__ == "__main__":
