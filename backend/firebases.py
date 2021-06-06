@@ -6,7 +6,7 @@ default_app = firebase_admin.initialize_app(cred_obj, {
 	'databaseURL': "https://e-notes-23-default-rtdb.firebaseio.com/"
 	})
 
-database = db.reference("/user")
+database_user = db.reference("/user")
 
 
    
