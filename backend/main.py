@@ -3,6 +3,7 @@ import os
 from fastapi import FastAPI
 import userFunction 
 from firebases import database_user
+import uvicorn
 
 app = FastAPI(docs_url="/helpme", redoc_url=None)
 
@@ -43,5 +44,6 @@ def login_user(username: str, password: str):
     else:
         return {"Failed login"}
 
-# run here
-# uvicorn main:app --reload
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", port=8000, reload=True)
